@@ -1,0 +1,23 @@
+#numpy is a math library for python
+import numpy as np
+
+#matplotlib.pyplot is a library for python used to plot the graph
+import matplotlib.pyplot as plt 
+
+#onstruct the arrays
+x=np.arange(0,10,0.1)
+y=1+(x*2)+(x*3)
+
+#find the mean values
+x_Mean=x.mean()
+y_Mean=y.mean()
+x_temp=x-x_Mean
+y_temp=y-y_Mean
+
+#the minimization of the least squares
+b1=np.sum(x_temp*y_temp)/np.sum(x_temp**2)
+b0=y_Mean-b1*x_Mean
+
+#plotting the graph
+plt.scatter(x,y)
+plt.show()
