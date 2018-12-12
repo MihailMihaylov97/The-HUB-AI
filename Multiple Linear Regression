@@ -14,4 +14,3 @@ x=np.c_[x_transpose, np.ones(x_transpose.shape[0])]
 b_hat=np.linalg.lstsq(x,y)[0]
 
 print(b_hat)
-plt.show()
